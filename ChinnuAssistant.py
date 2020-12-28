@@ -38,7 +38,7 @@ def running():
         print('Current time is ' + time)
 
         exit(0)
-    elif "what" or "who" or "where" in command:
+    elif "who" in command:
         search = command.replace('who the heck is', '')
         info = wikipedia.summary(search, 1)
         print(info)
@@ -48,7 +48,8 @@ def running():
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
         server.login('ramakrishnamlrit2019@gmail.com', 'Ram@2002')
-        reciever="Enter the recievers email id"
+        reciever="Enter the recievers email id : "
+        talk(reciever)
         print(reciever)
         a=input()
         b="what is the message"
@@ -58,7 +59,9 @@ def running():
             voice = listener.listen(source)
             n = listener.recognize_google(voice)
             c = listener.recognize_google(voice)
+            print(c)
         server.sendmail('ramakrishnamlrit2019@gmail.com',a,c)
+        talk("Mail sent")
         exit(0)
     elif "exit":
         talk("Bye")
