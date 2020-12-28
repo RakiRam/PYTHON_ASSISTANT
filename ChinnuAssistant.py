@@ -44,6 +44,22 @@ def running():
         print(info)
         talk(info)
         exit(0)
+    elif "send":
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login('ramakrishnamlrit2019@gmail.com', 'Ram@2002')
+        reciever="Enter the recievers email id"
+        print(reciever)
+        a=input()
+        b="what is the message"
+        talk(b)
+        with sr.Microphone() as source:
+            print("speak....")
+            voice = listener.listen(source)
+            n = listener.recognize_google(voice)
+            c = listener.recognize_google(voice)
+        server.sendmail('ramakrishnamlrit2019@gmail.com',a,c)
+        exit(0)
     elif "exit":
         talk("Bye")
         print("Bye")
