@@ -61,7 +61,7 @@ def running():
         server.login('ramakrishnamlrit2019@gmail.com', 'Ram@2002')
         reciever="Enter the recievers email id : "
         talk(reciever)
-        print(reciever)
+        #print(reciever)
         a=input()
         b="what is the message"
         talk(b)
