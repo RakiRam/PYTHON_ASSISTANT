@@ -44,7 +44,18 @@ def running():
         print(info)
         talk(info)
         exit(0)
-    elif "send":
+    elif "send" in command:
+        talk("Enter phone number with country code: ")
+        p=input()
+        talk("Enter your message:")
+        m=input()
+        talk("Enter time in hours:")
+        h=int(input())
+        talk("Enter time in minutes: ")
+        min=int(input())
+        pywhatkit.sendwhatmsg(p,m,h,min)
+        exit(0)
+    elif "mail":
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
         server.login('ramakrishnamlrit2019@gmail.com', 'Ram@2002')
