@@ -35,13 +35,13 @@ def running():
     elif "time" in command:
         time = datetime.datetime.now().strftime('%I:%M %p')
         talk('Current time is ' + time)
-        print('Current time is ' + time)
+        #print('Current time is ' + time)
 
         exit(0)
     elif "who" in command:
         search = command.replace('who the heck is', '')
         info = wikipedia.summary(search, 1)
-        print(info)
+        #print(info)
         talk(info)
         exit(0)
     elif "send" in command:
@@ -74,9 +74,9 @@ def running():
         server.sendmail('ramakrishnamlrit2019@gmail.com',a,c)
         talk("Mail sent")
         exit(0)
-    elif "exit":
+    elif "goodbye":
         talk("Bye")
-        print("Bye")
+        #print("Bye")
         exit(0)
     else:
         talk("I am sorry.I cant hear you")
