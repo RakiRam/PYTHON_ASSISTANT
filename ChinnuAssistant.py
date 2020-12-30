@@ -58,7 +58,7 @@ def running():
     elif "mail":
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
-        server.login('ramakrishnamlrit2019@gmail.com', 'Ram@2002')
+        server.login("yourmailid","password")#enter sender mail id and password
         reciever="Enter the recievers email id : "
         talk(reciever)
         #print(reciever)
@@ -71,7 +71,7 @@ def running():
             n = listener.recognize_google(voice)
             c = listener.recognize_google(voice)
             print(c)
-        server.sendmail('ramakrishnamlrit2019@gmail.com',a,c)
+        server.sendmail("recievermailid",a,c)#enter reciever mail id
         talk("Mail sent")
         exit(0)
     elif "goodbye":
