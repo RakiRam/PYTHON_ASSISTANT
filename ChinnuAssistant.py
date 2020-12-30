@@ -39,7 +39,7 @@ def running():
 
         exit(0)
     elif "who" in command:
-        search = command.replace('who the heck is', '')
+        search = command.replace('who is', '')
         info = wikipedia.summary(search, 1)
         #print(info)
         talk(info)
